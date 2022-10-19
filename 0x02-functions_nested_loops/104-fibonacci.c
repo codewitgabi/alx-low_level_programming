@@ -1,16 +1,16 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main -Entry point
  * @void: param
- * Return: 0
+ * Return 0
  */
 
 int main(void)
 {
 	unsigned long int a;
 	unsigned long int b;
-	unsigned long int c;
+	int c;
 	unsigned long int temp;
 
 	a = 0;
@@ -26,7 +26,7 @@ int main(void)
 		printf("%lu", b);
 
 		if (c != 97)
-			printf(", ");
+			printff(", ");
 		c++;
 	}
 	printf("\n");
