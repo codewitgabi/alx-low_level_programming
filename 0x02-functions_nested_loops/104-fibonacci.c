@@ -1,33 +1,38 @@
 #include <stdio.h>
+#define LARGEST 10000000000
 
 /**
  * main -Entry point
  * @void: param
- * Return 0
+ * Return: 0
  */
 
 int main(void)
 {
-	unsigned long int a;
-	unsigned long int b;
-	int c;
-	unsigned long int temp;
+	unsigned long int fr1 = 0, bk1 = 1, fr2 = 0, bk2 = 2;
+	unsigned long int hold1, hold2, hold3;
+	int count;
 
-	a = 0;
-	b = 1;
-	c = 0;
-
-	while (c < 98)
+	printf("%lu, %lu, ", bk1, bk2);
+	for (count = 2; count < 98; count++)
 	{
-		temp = a;
-		a = b;
-		b = a + temp;
-
-		printf("%lu", b);
-
-		if (c != 97)
+		if (bk1 + bk2 > LARGEST || fr2 > 0 || fr1 > 0)
+		{
+			hold1 = (bk1 + bk2) / LARGEST;
+			hold2 = (bk1 + bk2) % LARGEST;
+			hold3 = fr1 + fr2 + hold1;
+			fr1 = fr2, fr2 = hold3;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu%010lu", fr2, bk2);
+		}
+		else
+		{
+			hold2 = bk1 + bk2;
+			bk1 = bk2, bk2 = hold2;
+			printf("%lu", bk2);
+		}
+		if (count != 97)
 			printf(", ");
-		c++;
 	}
 	printf("\n");
 
