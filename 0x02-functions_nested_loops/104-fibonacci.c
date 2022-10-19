@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	long int a;
-	long int b;
-	long int c;
-	long int temp;
+	unsigned long int a;
+	unsigned long int b;
+	unsigned long int c;
+	unsigned long int temp;
 
 	a = 0;
 	b = 1;
@@ -23,7 +23,7 @@ int main(void)
 		a = b;
 		b = a + temp;
 
-		printf("%ld", b);
+		printf("%lu", b);
 
 		if (c != 97)
 			printf(", ");
