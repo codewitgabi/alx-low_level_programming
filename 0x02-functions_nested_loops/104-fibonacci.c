@@ -26,7 +26,7 @@ int main(void)
 		printf("%lu", b);
 
 		if (c != 97)
-			printff(", ");
+			printf(", ");
 		c++;
 	}
 	printf("\n");
