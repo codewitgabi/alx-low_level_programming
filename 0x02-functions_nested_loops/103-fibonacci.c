@@ -8,11 +8,11 @@
 
 int main(void)
 {
-	long long int a;
-	long long int b;
-	long long int c;
-	long long int temp;
-	long long int n;
+	long int a;
+	long int b;
+	long int c;
+	long int temp;
+	long int n;
 
 	n = 0;
 	a = 0;
@@ -29,7 +29,7 @@ int main(void)
 			n += b;
 		c++;
 	}
-	printf("%lld\n", n);
+	printf("%ld\n", n);
 
 	return (0);
 }

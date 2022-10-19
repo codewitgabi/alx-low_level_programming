@@ -8,10 +8,10 @@
 
 int main(void)
 {
-	long long int a;
-	long long int b;
-	long long int c;
-	long long int temp;
+	long int a;
+	long int b;
+	long int c;
+	long int temp;
 
 	a = 0;
 	b = 1;
@@ -23,7 +23,7 @@ int main(void)
 		a = b;
 		b = a + temp;
 
-		printf("%lld", b);
+		printf("%ld", b);
 
 		if (c != 49)
 			printf(", ");
