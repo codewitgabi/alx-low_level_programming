@@ -34,3 +34,10 @@ A function is written that prints n elements of an array of integers, followed b
 ### 9-strcpy.c
 A function is written that copies the string pointed to by src, including the terminating null byte (\0), to the buffer pointed to by dest.
 * Return value for the function is the pointer to dest.
+
+## Command for compiling files
+The normal `gcc <filename>` or `gcc <filename> -o <new_name>` cam be used to compile any of the files above but strictly for use in any ALX project, this command should be used.
+
+`gcc -Wall -pedantic -Werror -Wextra -std=gnu89 "main.c" <file_to_compile> -o <new_file_name>`
+
+* Where "main.c" is the file that contains the code to be executed.
