@@ -19,7 +19,7 @@ void puts_half(char *str)
 		str++;
 	}
 
-	mid = (len % 2 == 0) ? (len / 2) : (len - 1) / 2;
+	mid = (len % 2 == 0) ? (len / 2) : (len - 1) / 2 + 1;
 
 	for (i = mid; i < len; i++)
 		_putchar(s2[i]);
