@@ -22,6 +22,7 @@ int _atoi(char *s)
 			sign = -1;
 			break;
 		}
+		i++;
 	}
 
 	while (s[j] != '\0')
