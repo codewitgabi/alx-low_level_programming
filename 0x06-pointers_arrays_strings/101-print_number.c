@@ -7,23 +7,19 @@
 
 void print_number(int n)
 {
-	int count, inc;
+	unsigned int inc, z;
 
-	count = 1;
+	z = n;
 
 	if (n < 0)
 	{
 		_putchar('-');
-		n *= -1;
+		z = n * -1;
 	}
-	for (inc = 10; n % inc < n; inc *= 10)
-		count++;
-	inc = inc / 10;
+	inc = 1;
+	for (; z > 9; z /= 10)
+		inc *= 10;
 
-	while (count > 0)
-	{
-		_putchar((n / inc) % 10 + '0');
-		count--;
-		inc /= 10;
-	}
+	for (; inc >= 1; inc /= 10)
+		_putchar(((n / inc) % 10) + '0');
 }
