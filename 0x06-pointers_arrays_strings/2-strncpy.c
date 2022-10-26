@@ -1,4 +1,4 @@
-#include "main"
+#include "main.h"
 
 /**
  * _strncpy - copies src into dest and characters must
