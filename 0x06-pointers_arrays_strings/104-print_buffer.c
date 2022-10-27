@@ -19,25 +19,25 @@ void print_buffer(char *b, int size)
 			for (y = x; y < x + 10; y++)
 			{
 				if (y % 2 == 0)
-					_putchar(' ');
+					putchar(' ');
 				if (y < size)
 					printf("%.2x", b[y]);
 				else
-					_putchar(' ');
+					printf("  ");
 			}
-			_putchar(' ');
+			putchar(' ');
 			for (z = x; z < x + 10; z++)
 			{
 				if (z >= size)
 					break;
 				if (b[z] < ' ' || b[z] > '~')
-					_putchar('.');
+					putchar('.');
 				else
-					_putchar(b[z]);
+					putchar(b[z]);
 			}
-			_putchar('\n');
+			putchar('\n');
 		}
 	}
 	else
-		_putchar('\n');
+		putchar('\n');
 }
