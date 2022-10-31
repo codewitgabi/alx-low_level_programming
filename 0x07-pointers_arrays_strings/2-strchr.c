@@ -20,7 +20,7 @@ char *_strchr(char *s, char c)
 	j = i;
 
 	for (; s[i] != '\0'; i++)
-		putchar(s[i]);
+		_putchar(s[i]);
 
 	return (s[j]);
 }
