@@ -9,18 +9,13 @@
 
 char *_strchr(char *s, char c)
 {
-	int i, j;
+	unsigned int i;
 
 	for (i = 0; s[i] != '\0'; i++)
 	{
 		if (s[i] == c)
-			break;
+			return (s + 2);
 	}
 
-	j = i;
-
-	for (; s[i] != '\0'; i++)
-		_putchar(s[i]);
-
-	return (s[j]);
+	return ('\0');
 }
