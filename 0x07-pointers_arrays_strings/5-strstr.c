@@ -5,7 +5,7 @@
  * in the string haystack
  * @haystack: string to be searched
  * @needle: string to search
- * Return pointer to haystack
+ * Return: pointer to haystack
  */
 
 char *_strstr(char *haystack, char *needle)
