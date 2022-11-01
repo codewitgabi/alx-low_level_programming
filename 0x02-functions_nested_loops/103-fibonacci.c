@@ -8,7 +8,7 @@
 
 int main(void)
 {
-	long int a;
+	ong int a;
 	long int b;
 	long int c;
 	long int temp;
