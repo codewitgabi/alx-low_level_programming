@@ -9,4 +9,6 @@ This repository will hold various files for various projects in the alx course. 
 * [0x02-functions_nested_loops](https://github.com/codewitgabi/alx-low_level_programming/tree/master/0x02-functions_nested_loops)
 * [0x03-debugging](https://github.com/codewitgabi/alx-low_level_programming/tree/master/0x03-debugging)
 * [0x04-more_functions_and_nested_loops](https://github.com/codewitgabi/alx-low_level_programming/tree/master/0x04-more_functions_nested_loops)
-* [0x05-pointers_arrays_and_string](https://github.com/codewitgabi/alx-low_level_programming/tree/master/0x05-pointers_arrays_strings)
+* [0x05-pointers_arrays_strings](https://github.com/codewitgabi/alx-low_level_programming/tree/master/0x05-pointers_arrays_strings)
+* [0x06-pointers_arrays_strings](https://github.com/codewitgabi/alx-low_level_programming/tree/master/0x06-pointers_arrays_strings)
+* [0x07-pointers_arrays_strings](https://github.com/codewitgabi/alx-low_level_programming/tree/master/0x07-pointers_arrays_strings)
