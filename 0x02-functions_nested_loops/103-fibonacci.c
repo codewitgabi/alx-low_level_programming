@@ -18,7 +18,7 @@ int main(void)
 		a = b;
 		b = a + z;
 	}
-	printf("%u\n", b);
+	printf("%u\n", count);
 
 	return (0);
 }
