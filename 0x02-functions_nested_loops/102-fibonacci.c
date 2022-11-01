@@ -8,22 +8,15 @@
 
 int main(void)
 {
-	long int a;
-	long int b;
-	long int c;
-	long int temp;
-
-	a = 0;
-	b = 1;
-	c = 0;
+	long int a = 1, b = 1, c = 0, z;
 
 	while (c < 50)
 	{
-		temp = a;
-		a = b;
-		b = a + temp;
-
 		printf("%ld", b);
+
+		z = a;
+		a = b;
+		b = a + z;
 
 		if (c != 49)
 			printf(", ");
