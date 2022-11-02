@@ -9,38 +9,35 @@
 
 int is_palindrome(char *s)
 {
-	int length = 0, mid, i = 0;
+	int length = 0;
 
 	while (*(s + length))
 		length++;
 
-	mid = length / 2;
+	if (length == 0)
+		return (1);
 
-	return (check_opp_str(s, mid, length, i));
+	return (check_opp_str(s, 0, length - 1));
 }
 
 /**
  * check_opp_str - checks opposite string at a particular index
  * @s: a string to check
- * @mid: mid index of the string
- * @length: length of the string
- * @i: current index at string a
- * Return: correct palindromw of s
+ * @a: current index of the string
+ * @b: length of the string
+ * Return: correct palindrome of s
  */
 
-int check_opp_str(char *s, int mid, int length, i)
+int check_opp_str(char *str, int a, int b)
 {
-	if (length == 0)
+	if (a == b)
 		return (1);
 
-	if (i <= mid)
-	{
-		if (*(s + i) == s[length - 1 - i] && i == mid)
-			return (1);
-
-		return (check_opp_str(s, mid, length, i + 1));
-	}
-
-	if (i > mid)
+	if (str[a] != str[b])
 		return (0);
+
+	if (a < b + 1)
+		return check_opp_str(str, a + 1, b - 1);
+
+	return (1);
 }
