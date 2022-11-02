@@ -6,9 +6,33 @@ In this file, a function is written that takes a pointer to an int as parameter 
 
 ### 1-swap.c
 A function is written to swap the value of two integers.
+A pointer is used so that we cam get the memory addresses of both parameters and change the value from the memory address directly. Just like going through the headquarter to get something done rather than from outposts. Surely answers will be more effective when it comes from hq.
 
 ### 2-strlen.c
 A function is written to find the length of a string rather than using the builtin strlen() function.
+The following syntaxes can also be used.
+
+```
+int l = 0!
+while (*(s + l))
+	l++;
+```
+or
+
+```
+int i = 0;
+while (*s)
+{
+	i++;
+	s++;
+}
+```
+__Probably wondering what `*s` and `s` hold__
+`s` holds both the memory address and value of the pointer `*s`. Therefore, `printf("%p\n", s);` prints the pointer to the first character in `*s` and `printf("%s\n", s);` prints the whole string.
+
+`*s` on the other hand, gets only a single chatacter. So `printf("%c\n", *s);` gets the first character in the string `s`. *(s + 1); gets the second and so on.
+
+Note that the above syntax works for both array of characters and char pointer.
 
 ### 3-puts.c
 A function is written that prints a string, followed by a new line, to stdout. This string is outputted using the _putchar() function in _putchar.c
