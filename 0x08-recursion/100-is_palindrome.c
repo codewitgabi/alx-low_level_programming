@@ -1,6 +1,20 @@
 #include "main.h"
 
 /**
+ * _strlen - gets the length of the string since loops
+ * arent allowed in this task
+ * @s: string to find length
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	if (!*s)
+		return (0);
+	return (_strlen(s + 1) + 1);
+}
+
+/**
  * is_palindrome - checkes if a string is a palindrome
  * using recursion
  * @s: string to check
@@ -9,10 +23,7 @@
 
 int is_palindrome(char *s)
 {
-	int length = 0;
-
-	while (*(s + length))
-		length++;
+	int length = _strlen(s);
 
 	if (length == 0)
 		return (1);
@@ -22,7 +33,7 @@ int is_palindrome(char *s)
 
 /**
  * check_opp_str - checks opposite string at a particular index
- * @s: a string to check
+ * @str: a string to check
  * @a: current index of the string
  * @b: length of the string
  * Return: correct palindrome of s
@@ -37,7 +48,7 @@ int check_opp_str(char *str, int a, int b)
 		return (0);
 
 	if (a < b + 1)
-		return check_opp_str(str, a + 1, b - 1);
+		return (check_opp_str(str, a + 1, b - 1));
 
 	return (1);
 }
