@@ -1,24 +1,23 @@
 #include "main.h"
 
 /**
- * _strchr - prints from first occurence of c in s to end of string s
- * @s: string to search
- * @c: character to search
- * Return: pointer to first occurence of c in s
+ * *_strchr - fills memory with a constant byte.
+ * @s: pointer to put the constant
+ * @c: constant
+ * Return: s
  */
 
 char *_strchr(char *s, char c)
 {
-	unsigned int i;
+	int i;
 
-	for (i = 0; s[i] != '\0'; i++)
+	for (i = 0; s[i] >= '\0'  ; i++)
 	{
 		if (s[i] == c)
+		{
 			return (s + i);
+		}
 	}
-
-	if (s[i] == c)
-		return (s + i);
 
 	return ('\0');
 }
