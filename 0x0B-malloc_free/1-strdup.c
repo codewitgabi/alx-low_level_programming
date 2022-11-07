@@ -14,7 +14,7 @@ char *_strdup(char *str)
 	int c = 0, j;
 
 	if (str == NULL)
-		retrn (NULL);
+		return (NULL);
 
 	while (*(str + c))
 		c++;
