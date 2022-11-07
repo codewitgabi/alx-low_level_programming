@@ -8,7 +8,7 @@
  * Return: pointer to concatenated string
  */
 
-char *_strdup(char *str)
+char *str_concat(char *s1, char *s2)
 {
 	char *s3;
 	int c = 0, i = 0, j;
