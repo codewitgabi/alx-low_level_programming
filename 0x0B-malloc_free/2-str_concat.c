@@ -13,11 +13,16 @@ char *str_concat(char *s1, char *s2)
 	char *s3;
 	int c = 0, i = 0, j;
 
+	if (s1 == NULL)
+		return (NULL);
+	if (s2 == NULL)
+		return (NULL);
+
 	while (*(s1 + c))
 		c++;
 	while (*(s2 + i))
 		i++;
-	s3 = malloc(c + i);
+	s3 = malloc(c + i + 1);
 
 	for (j = 0; j < c; j++)
 		s3[j] = s1[j];
