@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * strtow - splits a string to word
+ * word_len - splits a string to word
  * @str: string to split
  * Return: 0
  */
