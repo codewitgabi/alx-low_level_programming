@@ -10,24 +10,25 @@
 
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
+	void *mem;
 	char *p;
 	unsigned int s = 0;
 
 	if (nmemb == 0 || size == 0)
 		return (NULL);
 
-	p = malloc(nmemb * size);
+	mem = malloc(nmemb * size);
 
-	if (p == NULL)
+	if (mem == NULL)
 		return (NULL);
+
+	p = mem;
 
 	while (s < (nmemb * size))
 	{
-		p[s] = 0;
+		p[s] = '\0';
 		s++;
 	}
 
-	p[s] = '\0';
-
-	return (p);
+	return (mem);
 }
