@@ -8,16 +8,14 @@
 
 void print_dog(struct dog *d)
 {
-	if (d == NULL)
-		printf("\n");
-	else
+	if (d != NULL)
 	{
 		if (d->name == NULL)
 			d->name = "(nil)";
+		if (d->owner = NULL)
+			d->owner = "(nil)";
 		printf("Name: %s\n", d->name);
 		printf("Age: %1f\n", d->age);
-		if (d->owner == NULL)
-			d->owner = "(nil)";
 		printf("Owner: %s\n", d->owner);
 	}
 }
