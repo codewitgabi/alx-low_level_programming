@@ -2,72 +2,82 @@
 #include "dog.h"
 
 /**
- * _strcpy - copies a string
- * @s: string to copy
- * Return: pointer to returned string
+ * _copy  -   Make a copy of passed in argument
+ * @src:      Data to make copy of
+ * Return:    Pointer
  */
 
-char *_strcpy(char *s)
+char *_copy(char *src)
 {
-	char *p;
-	int i, j;
+	char *ptr;
+	int i, len;
 
-	if (s == NULL)
+	if (src == NULL)
+	{
 		return (NULL);
+	}
 
-	for (j = 0; *(s + j); j++)
+	for (len = 0; src[len] != '\0'; len++)
 		;
-	p = malloc(sizeof(char) * (j + 1));
 
-	if (p == NULL)
+	ptr = malloc(sizeof(char) * (len + 1));
+
+	if (ptr == NULL)
+	{
 		return (NULL);
+	}
 
-	for (i = 0; *(s + i); i++)
-		p[i] = s[i];
+	for (i = 0; src[i] != '\0'; i++)
+	{
+		ptr[i] = src[i];
+	}
 
-	p[i] = '\0';
-
-	return (p);
+	ptr[i] = '\0';
+	return (ptr);
 }
 
 /**
- * new_dog - creates a new struct.
- * @name: param
- * @age: param
- * @owner: param
- * Return: pointer to struct
+ * new_dog     - Create a new dog variable
+ * @name:        Name of the dog
+ * @age:         Age of the dog
+ * @owner:       Owner of the dog
+ * Return:       Pointer to new dog variable
  */
 
 dog_t *new_dog(char *name, float age, char *owner)
 {
-	dog_t *ret_dog;
-	char *cpy_name, *cpy_owner;
+	dog_t *snoopie;
+	char *new_name, *new_owner;
 
 	if (name == NULL || owner == NULL)
-		return (NULL);
-
-	ret_dog = malloc(sizeof(dog_t));
-
-	if (ret_dog == NULL)
-		return (NULL);
-
-	cpy_name = _strcpy(name);
-	if (cpy_name == NULL)
 	{
-		free(ret_dog);
 		return (NULL);
 	}
 
-	cpy_owner = _strcpy(owner);
-	if (cpy_owner == NULL)
+	snoopie = malloc(sizeof(dog_t));
+	if (snoopie == NULL)
 	{
-		free(ret_dog);
 		return (NULL);
 	}
 
-	ret_dog->name = cpy_name;
-	ret_dog->age = age;
-	ret_dog->owner = cpy_owner;
+	new_name = _copy(name);
+	if (new_name == NULL)
+	{
+		free(snoopie);
+		return (NULL);
+	}
+	(*snoopie).name = new_name;
 
-	return (ret_dog);
+	(*snoopie).age = age;
+
+	new_owner = _copy(owner);
+	if (new_owner == NULL)
+	{
+		free((*snoopie).name);
+		free(snoopie);
+		return (NULL);
+	}
+	(*snoopie).owner = new_owner;
+
+	return (snoopie);
 }
