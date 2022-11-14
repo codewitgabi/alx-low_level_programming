@@ -1,6 +1,15 @@
 #ifndef HEADER
 #define HEADER
 
+/**
+ * struct dog - a struct object
+ * @name: name of the dog
+ * @age: age of the dog
+ * @owner: owner of the dog
+ * Description: a dog object that holds data for name, age and
+ * owner of the dog.
+ */
+
 struct dog
 {
 	char *name;
