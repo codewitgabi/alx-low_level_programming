@@ -33,6 +33,24 @@ To call a pointer to a function, we can say;
 __OR__
 `foo_ptr("argument");`
 
+## Working principle of 3-*
+* 3-calc.h:
+This file holds the header files for all function used in the program.
+```
+typedef struct op
+{
+	char *op;
+	int (*f)(int a, int b);
+} op_t;
+```
+
+The above code takes `op` which will hold the operator passed on the command line.
+The other argument which is a function pointer to any of the functions for performing basic math operation.
+
+* 3-op_functions.c
+This file holds the code to the prototypes defined in the header file.
+
 ## Author
 Gabriel Michael Ojomakpene
 gabrielmicheal497@gmail.com
+09020617734
