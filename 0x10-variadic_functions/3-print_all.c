@@ -12,7 +12,9 @@ void print_all(const char * const format, ...)
 	char *s;
 	va_list arg;
 
-	is_valid_specifier = 1;
+	int is_valid_specifier = 1;
+
+	va_start(arg, format);
 
 	for (i = 0; format[i]; i++)
 	{
@@ -23,11 +25,11 @@ void print_all(const char * const format, ...)
 				is_valid_specifier = 1;
 				break;
 			case 'f':
-				printf("%f", va_arg(arg, float));
+				printf("%f", va_arg(arg, double));
 				is_valid_specifier = 1;
 				break;
 			case 'c':
-				printf("%c", va_arg(arg, char));
+				printf("%c", va_arg(arg, int));
 				is_valid_specifier = 1;
 				break;
 			case 's':
