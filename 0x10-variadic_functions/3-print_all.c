@@ -8,7 +8,7 @@
 
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	char *s;
 	va_list arg;
 
@@ -16,12 +16,12 @@ void print_all(const char * const format, ...)
 
 	va_start(arg, format);
 
-	for (i = 0; format[i]; i++)
+	while (format != NULL && format[i])
 	{
 		switch (format[i])
 		{
 			case 'i':
-				printf("%d", va_arg(arg, int));
+				printf("%i", va_arg(arg, int));
 				is_valid_specifier = 1;
 				break;
 			case 'f':
@@ -46,6 +46,7 @@ void print_all(const char * const format, ...)
 		}
 		if (format[i + 1] && is_valid_specifier == 1)
 			printf(", ");
+		i++;
 	}
 	va_end(arg);
 
