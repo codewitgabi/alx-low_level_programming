@@ -2,7 +2,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_strings - prints all string to stdout that are passed as optional argument
+ * print_strings - prints all string to stdout that are passed as optional arg
  * @separator: character to use for separating the printed string.
  * @n: number of optional args passed.
  */
