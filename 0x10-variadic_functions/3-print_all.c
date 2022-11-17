@@ -11,7 +11,6 @@ void print_all(const char * const format, ...)
 	unsigned int i = 0;
 	char *s;
 	va_list arg;
-
 	int is_valid_specifier = 1;
 
 	va_start(arg, format);
@@ -35,9 +34,8 @@ void print_all(const char * const format, ...)
 			case 's':
 				s = va_arg(arg, char *);
 				if (s == NULL)
-					printf("(nil)");
-				else
-					printf("%s", s);
+					s = "(nil)";
+				printf("%s", s);
 				is_valid_specifier = 1;
 				break;
 			default:
@@ -49,6 +47,5 @@ void print_all(const char * const format, ...)
 		i++;
 	}
 	va_end(arg);
-
 	printf("\n");
 }
